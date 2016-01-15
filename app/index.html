@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Massage planner</title>
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css css/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js js/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body class="nl-blurred">
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="container">
+      <header>
+        <h1>Funda massage stoelen app</h1>
+      </header>
+      <div class="main clearfix">
+        <form id="nl-form" class="nl-form">
+          My name is
+          <input type="text" value="" placeholder="Ivana" data-subline="Please put your nickname here"/>
+          and my email address is
+          <input type="email" value="" placeholder="ivana@funda.nl" data-subline="Please put your email here"/>.
+          <br>
+          I'd like to create a massage planner on
+          <input type="date">
+          that last for
+          <input type="number" value="" placeholder="3" data-subline="How long"/>
+          days
+
+          <div class="nl-submit-wrap">
+            <button class="nl-submit" type="submit">Find a restaurant</button>
+          </div>
+          <div class="nl-overlay"></div>
+        </form>
+      </div>
+    </div><!-- /container -->
+
+    <!-- build:js js/vendor.js -->
+    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js js/main.js -->
+    <script src="js/main.js"></script>
+
+    <script>
+      var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+    </script>
+    <!-- endbuild -->
+  </body>
+</html>
