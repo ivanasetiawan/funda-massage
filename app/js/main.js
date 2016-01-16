@@ -8,22 +8,22 @@
     String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
   }
 
-  function NLForm( el ) {
+  function massageForm( el ) {
     this.el = el;
-    this.overlay = this.el.querySelector( '.nl-overlay' );
+    this.overlay = this.el.querySelector( '.massage-overlay' );
     this.fields = [];
     this.fldOpen = -1;
     this._init();
   }
 
-  NLForm.prototype = {
+  massageForm.prototype = {
     _init : function() {
       var self = this;
       Array.prototype.slice.call( this.el.querySelectorAll( 'select' ) ).forEach( function( el, i ) {
         self.fldOpen++;
         self.fields.push( new NLField( self, el, 'dropdown', self.fldOpen ) );
       } );
-      Array.prototype.slice.call( this.el.querySelectorAll( 'input' ) ).forEach( function( el, i ) {
+      Array.prototype.slice.call( this.el.querySelectorAll( '[data-input-custom]' ) ).forEach( function( el, i ) {
         self.fldOpen++;
         self.fields.push( new NLField( self, el, 'input', self.fldOpen ) );
       } );
@@ -58,14 +58,14 @@
     _createDropDown : function() {
       var self = this;
       this.fld = document.createElement( 'div' );
-      this.fld.className = 'nl-field nl-dd';
+      this.fld.className = 'massage-field massage-dd';
       this.toggle = document.createElement( 'a' );
       this.toggle.innerHTML = this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML;
-      this.toggle.className = 'nl-field-toggle';
+      this.toggle.className = 'massage-field-toggle';
       this.optionsList = document.createElement( 'ul' );
       var ihtml = '';
       Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
-        ihtml += self.elOriginal.selectedIndex === i ? '<li class="nl-dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
+        ihtml += self.elOriginal.selectedIndex === i ? '<li class="massage-dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
         // selected index value
         if( self.elOriginal.selectedIndex === i ) {
           self.selectedIdx = i;
@@ -80,23 +80,23 @@
     _createInput : function() {
       var self = this;
       this.fld = document.createElement( 'div' );
-      this.fld.className = 'nl-field nl-ti-text';
+      this.fld.className = 'massage-field massage-ti-text';
       this.toggle = document.createElement( 'a' );
       this.toggle.innerHTML = this.elOriginal.getAttribute( 'placeholder' );
-      this.toggle.className = 'nl-field-toggle';
+      this.toggle.className = 'massage-field-toggle';
       this.optionsList = document.createElement( 'ul' );
       this.getinput = document.createElement( 'input' );
       this.getinput.setAttribute( 'type', 'text' );
       this.getinput.setAttribute( 'placeholder', this.elOriginal.getAttribute( 'placeholder' ) );
       this.getinputWrapper = document.createElement( 'li' );
-      this.getinputWrapper.className = 'nl-ti-input';
+      this.getinputWrapper.className = 'massage-ti-input';
       this.inputsubmit = document.createElement( 'button' );
-      this.inputsubmit.className = 'nl-field-go';
+      this.inputsubmit.className = 'massage-field-go';
       this.inputsubmit.innerHTML = 'Go';
       this.getinputWrapper.appendChild( this.getinput );
       this.getinputWrapper.appendChild( this.inputsubmit );
       this.example = document.createElement( 'li' );
-      this.example.className = 'nl-ti-example';
+      this.example.className = 'massage-ti-example';
       this.example.innerHTML = this.elOriginal.getAttribute( 'data-subline' );
       this.optionsList.appendChild( this.getinputWrapper );
       this.optionsList.appendChild( this.example );
@@ -135,7 +135,7 @@
       this.open = true;
       this.form.fldOpen = this.pos;
       var self = this;
-      this.fld.className += ' nl-field-open';
+      this.fld.className += ' massage-field-open';
     },
     close : function( opt, idx ) {
       if( !this.open ) {
@@ -143,14 +143,14 @@
       }
       this.open = false;
       this.form.fldOpen = -1;
-      this.fld.className = this.fld.className.replace(/\b nl-field-open\b/,'');
+      this.fld.className = this.fld.className.replace(/\b massage-field-open\b/,'');
 
       if( this.type === 'dropdown' ) {
         if( opt ) {
-          // remove class nl-dd-checked from previous option
+          // remove class massage-dd-checked from previous option
           var selectedopt = this.optionsList.children[ this.selectedIdx ];
           selectedopt.className = '';
-          opt.className = 'nl-dd-checked';
+          opt.className = 'massage-dd-checked';
           this.toggle.innerHTML = opt.innerHTML;
           // update selected index value
           this.selectedIdx = idx;
@@ -167,6 +167,6 @@
   }
 
   // add to global namespace
-  window.NLForm = NLForm;
+  window.massageForm = massageForm;
 
 } )( window );

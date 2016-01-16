@@ -1,0 +1,14 @@
+.mainheader {
+  height: 52px;
+  line-height: 52px;
+  background-color: $color-orange;
+  border-bottom: solid 2px $color-blue;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 100px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+}

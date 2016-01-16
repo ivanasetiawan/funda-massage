@@ -1,3 +1,7 @@
+$compile: (
+  normalize: true
+) !default;
+
 $color-orange: #F8B000;
 $color-yellow: #FAC74C;
 
@@ -6,6 +10,15 @@ $color-blue-light: #6CCFF6; // business
 $color-blue-lightest: #E7F1F5;
 $color-blue-dark: #3888C5; // btn & link
 
-$color-green: #B3CF01;
+$color-green: #6cc88a;
+$color-white: #f3f3f3;
 
 $font-proxima: 'Proxima Nova', 'Open Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+$font-satisfy: 'Satisfy', $font-proxima;
+
+// Breakpoints
+$bp-xs: 320px;
+$bp-sm: 736px;
+$bp-md: 1024px;
+$bp-lg: 1280px;
+$bp-xl: 1440px;

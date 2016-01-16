@@ -1,7 +1,13 @@
 // bower:scss
 // endbower
 @import 'base/vars';
+@import 'base/functions';
+@import 'base/normalize';
 @import 'base/layout';
+@import 'base/fonts';
+@import 'base/typography';
+
 @import 'components/header';
 @import 'components/footer';
+@import 'components/preloader';
 @import 'components/form';

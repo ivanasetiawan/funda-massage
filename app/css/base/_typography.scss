@@ -1,0 +1,8 @@
+h1,
+.h1 {
+  font-size: rem(80px);
+  line-height: 1;
+  @media screen and (min-width: $bp-sm) { font-size: rem(100px); }
+  @media screen and (min-width: $bp-md) { font-size: rem(125px); }
+  @media screen and (min-width: $bp-lg) { font-size: rem(150px); }
+}

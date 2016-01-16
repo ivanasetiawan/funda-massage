@@ -1,0 +1,78 @@
+// Basic rem converter
+@function rem($target, $base:16px) {
+  @return ($target / $base) + rem;
+}
+
+@-webkit-keyframes animInitialHeader {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0,800px,0);
+  }
+}
+
+@keyframes animInitialHeader {
+  from { opacity: 0;
+    -webkit-transform: translate3d(0,800px,0);
+    transform: translate3d(0,800px,0); }
+}
+
+@-webkit-keyframes animSwitchLayoutOut {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  95% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+
+}
+
+@keyframes animSwitchLayoutOut {
+  0% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  90% {
+    opacity: 1;
+    height: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
+
+@-webkit-keyframes animSwitchLayoutIn {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+@keyframes animSwitchLayoutIn {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+
+

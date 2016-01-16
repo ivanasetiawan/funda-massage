@@ -1,32 +1,29 @@
-// @font-face {
-//   font-family: 'nlicons';
-//   src:url('../fonts/nlicons/nlicons.eot');
-//   src:url('../fonts/nlicons/nlicons.eot?#iefix') format('embedded-opentype'),
-//     url('../fonts/nlicons/nlicons.woff') format('woff'),
-//     url('../fonts/nlicons/nlicons.ttf') format('truetype'),
-//     url('../fonts/nlicons/nlicons.svg#nlicons') format('svg');
-//   font-weight: normal;
-//   font-style: normal;
-// }
-
-/* general style for the form */
-.nl-form {
-  width: 100%;
-  margin: 0.3em auto 0 auto;
-  font-size: 4em;
+.massage-form {
+  font-size: 2rem;
   line-height: 1.5;
+  @media screen and (min-width: $bp-md) {
+    width: 80%;
+    margin-top: -54px;
+    padding: 20px;
+    resize: both;
+    overflow: auto;
+  }
+  @media screen and (min-width: $bp-md) {
+    width: 70%;
+    font-size: 3em;
+  }
 }
 
-.nl-form ul {
+.massage-form ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 /* normalize the input elements, make them look like everything else */
-.nl-form input,
-.nl-form select,
-.nl-form button {
+.massage-form input,
+.massage-form select,
+.massage-form button {
   border: none;
   background: transparent;
   font-family: inherit;
@@ -41,24 +38,24 @@
   -moz-appearance: none;
 }
 
-.nl-form input:focus {
+.massage-form input:focus {
   outline: none;
 }
 
 /* custom field (drop-down, text element) styling  */
-.nl-field {
+.massage-field {
   display: inline-block;
   position: relative;
 }
 
-.nl-field.nl-field-open {
+.massage-field.massage-field-open {
   z-index: 10000;
 }
 
 /* the toggle is the visible part in the form */
-.nl-field-toggle,
-.nl-form input,
-.nl-form select  {
+.massage-field-toggle,
+.massage-form input,
+.massage-form select  {
   line-height: inherit;
   display: inline-block;
   color: #b14943;
@@ -67,7 +64,7 @@
 }
 
 /* drop-down list / text element */
-.nl-field ul {
+.massage-field ul {
   position: absolute;
   visibility: hidden;
   background: #76C3BD;
@@ -83,7 +80,7 @@
   transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field.nl-field-open ul {
+.massage-field.massage-field-open ul {
   visibility: visible;
   opacity: 1;
   -webkit-transform: translateY(-50%) scale(1);
@@ -94,33 +91,33 @@
   transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
 }
 
-.nl-field ul li {
+.massage-field ul li {
   color: #fff;
   position: relative;
 }
 
-.nl-dd ul li {
+.massage-dd ul li {
   padding: 0 1.5em 0 0.5em;
   cursor: pointer;
   white-space: nowrap;
 }
 
-.nl-dd ul li.nl-dd-checked {
+.massage-dd ul li.massage-dd-checked {
   color: #478982;
 }
 
-.no-touch .nl-dd ul li:hover {
+.no-touch .massage-dd ul li:hover {
   background: rgba(0,0,0,0.05);
 }
 
-.no-touch .nl-dd ul li:hover:active {
+.no-touch .massage-dd ul li:hover:active {
   color: #478982;
 }
 
 /* icons for some elements */
-.nl-dd ul li.nl-dd-checked:before,
-.nl-submit:before,
-.nl-field-go:before {
+.massage-dd ul li.massage-dd-checked:before,
+.massage-submit:before,
+.massage-field-go:before {
   font-family: 'nlicons';
   speak: none;
   font-style: normal;
@@ -130,7 +127,7 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.nl-dd ul li.nl-dd-checked:before {
+.massage-dd ul li.massage-dd-checked:before {
   content: "\e000";
   position: absolute;
   right: 1em;
@@ -138,18 +135,18 @@
   line-height: 3;
 }
 
-.nl-ti-text ul {
-  min-width: 8em;
+.massage-ti-text ul {
+  min-width: 10em;
 }
 
-.nl-ti-text ul li.nl-ti-input input {
+.massage-ti-text ul li.massage-ti-input input {
   width: 100%;
   padding: 0.2em 2em 0.2em 0.5em;
   border-bottom: none;
   color: #fff;
 }
 
-.nl-form .nl-field-go {
+.massage-form .massage-field-go {
   position: absolute;
   right: 0;
   top: 0;
@@ -161,7 +158,7 @@
   color: transparent;
 }
 
-.nl-field-go:before {
+.massage-field-go:before {
   content: "\e001";
   font-size: 75%;
   color: #fff;
@@ -199,7 +196,7 @@ input:focus::-ms-input-placeholder {
 }
 
 /* example field below text input */
-.nl-ti-text ul li.nl-ti-example {
+.massage-ti-text ul li.massage-ti-example {
   font-size: 40%;
   font-style: italic;
   font-weight: 400;
@@ -208,16 +205,16 @@ input:focus::-ms-input-placeholder {
   border-top: 1px dashed rgba(255,255,255,0.7);
 }
 
-.nl-ti-text ul li.nl-ti-example em {
+.massage-ti-text ul li.massage-ti-example em {
   color: #fff
 }
 
 /* submit button */
-.nl-submit-wrap {
+.massage-submit-wrap {
   margin-top: 0.4em;
 }
 
-.nl-form .nl-submit {
+.massage-form .massage-submit {
   line-height: 3;
   text-transform: uppercase;
   cursor: pointer;
@@ -230,7 +227,7 @@ input:focus::-ms-input-placeholder {
   letter-spacing: 3px;
 }
 
-.nl-submit:before {
+.massage-submit:before {
   content: "\e001";
   color: #fff;
   float: left;
@@ -239,17 +236,17 @@ input:focus::-ms-input-placeholder {
   background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover,
-.no-touch .nl-form .nl-submit:active {
+.no-touch .massage-form .massage-submit:hover,
+.no-touch .massage-form .massage-submit:active {
   background: #69B1A9;
 }
 
-.no-touch .nl-form .nl-submit:hover:before {
+.no-touch .massage-form .massage-submit:hover:before {
   background: #58a199;
 }
 
 /* overlay becomes visible when a field is opened */
-.nl-overlay {
+.massage-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -264,7 +261,7 @@ input:focus::-ms-input-placeholder {
   transition: visibility 0s 0.3s, opacity 0.3s;
 }
 
-.nl-field.nl-field-open ~ .nl-overlay {
+.massage-field.massage-field-open ~ .massage-overlay {
   opacity: 1;
   visibility: visible;
   -webkit-transition-delay: 0s;
@@ -273,13 +270,13 @@ input:focus::-ms-input-placeholder {
 }
 
 @media screen and (max-width: 45em) {
-  .nl-form {
+  .massage-form {
     font-size: 3em;
   }
 }
 
 @media screen and (max-width: 25em) {
-  .nl-form {
+  .massage-form {
     font-size: 2em;
   }
 }
