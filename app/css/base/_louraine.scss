@@ -3,31 +3,34 @@
 //
 
 @font-face {
-  font-family: 'louraine';
-  src: url($font-path + 'louraine_aa5a642f41af5276cfcea4729662ceeb.eot');
-  src: url($font-path + 'louraine_aa5a642f41af5276cfcea4729662ceeb.eot?#iefix') format('embedded-opentype'),
-       url($font-path + 'louraine_aa5a642f41af5276cfcea4729662ceeb.woff') format('woff'),
-       url($font-path + 'louraine_aa5a642f41af5276cfcea4729662ceeb.ttf') format('truetype'),
-       url($font-path + 'louraine_aa5a642f41af5276cfcea4729662ceeb.svg#louraine') format('svg');
+  font-family: "louraine";
+  src: url($font-path + "louraine_36f0743405a378ef2de88825490ebb3b.eot");
+  src: url($font-path + "louraine_36f0743405a378ef2de88825490ebb3b.eot?#iefix") format("embedded-opentype"),
+       url($font-path + "louraine_36f0743405a378ef2de88825490ebb3b.woff") format("woff"),
+       url($font-path + "louraine_36f0743405a378ef2de88825490ebb3b.ttf") format("truetype"),
+       url($font-path + "louraine_36f0743405a378ef2de88825490ebb3b.svg#louraine") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
-    font-family: 'louraine';
-    src: url('louraine_aa5a642f41af5276cfcea4729662ceeb.svg#louraine') format('svg');
+    font-family: "louraine";
+    src: url("louraine_36f0743405a378ef2de88825490ebb3b.svg#louraine") format("svg");
   }
 }
 
 [data-icon]:before { content: attr(data-icon); }
 
+%baseIcon,
 [data-icon]:before,
+.icon-check:before,
+.icon-cross:before,
 .icon-funda-logo:before,
 .icon-thumbs_down:before,
 .icon-thumbs_up:before {
   display: inline-block;
-  font-family: 'louraine';
+  font-family: "louraine";
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -40,10 +43,14 @@
   font-smoothing: antialiased;
 }
 
-.icon-funda-logo:before { content: '\f100'; }
-.icon-thumbs_down:before { content: '\f101'; }
-.icon-thumbs_up:before { content: '\f102'; }
+.icon-check:before, %icon-check { content: "\f103"; }
+.icon-cross:before { content: "\f104"; }
+.icon-funda-logo:before { content: "\f100"; }
+.icon-thumbs_down:before { content: "\f101"; }
+.icon-thumbs_up:before { content: "\f102"; }
 
-$font-louraine-funda-logo: '\f100';
-$font-louraine-thumbs_down: '\f101';
-$font-louraine-thumbs_up: '\f102';
+$font-louraine-check: "\f103";
+$font-louraine-cross: "\f104";
+$font-louraine-funda-logo: "\f100";
+$font-louraine-thumbs_down: "\f101";
+$font-louraine-thumbs_up: "\f102";

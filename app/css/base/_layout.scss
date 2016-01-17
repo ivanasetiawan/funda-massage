@@ -12,6 +12,10 @@ body {
 .container {
   max-width: $bp-xl;
   margin: 0 auto;
+  padding: 0 rem(16px);
+  @media screen and (min-width: $bp-md) {
+    padding: 0 rem(24px);
+  }
 }
 
 .centered {

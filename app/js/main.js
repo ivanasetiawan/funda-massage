@@ -91,7 +91,7 @@
       this.getinputWrapper = document.createElement( 'li' );
       this.getinputWrapper.className = 'massage-ti-input';
       this.inputsubmit = document.createElement( 'button' );
-      this.inputsubmit.className = 'massage-field-go';
+      this.inputsubmit.className = 'massage-field-go icon-check';
       this.inputsubmit.innerHTML = 'Go';
       this.getinputWrapper.appendChild( this.getinput );
       this.getinputWrapper.appendChild( this.inputsubmit );

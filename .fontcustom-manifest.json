@@ -1,15 +1,23 @@
 {
   "checksum": {
-    "previous": "aa5a642f41af5276cfcea4729662ceeb0afe969d12e6f668bdf76b18b2b06986",
-    "current": "aa5a642f41af5276cfcea4729662ceeb0afe969d12e6f668bdf76b18b2b06986"
+    "previous": "36f0743405a378ef2de88825490ebb3bc1935f3313007f5016128b61b680c024",
+    "current": "36f0743405a378ef2de88825490ebb3bc1935f3313007f5016128b61b680c024"
   },
   "fonts": [
-    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.ttf",
-    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.svg",
-    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.woff",
-    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.eot"
+    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.ttf",
+    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.svg",
+    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.woff",
+    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.eot"
   ],
   "glyphs": {
+    "check": {
+      "codepoint": 61699,
+      "source": "app/icons/check.svg"
+    },
+    "cross": {
+      "codepoint": 61700,
+      "source": "app/icons/cross.svg"
+    },
     "funda-logo": {
       "codepoint": 61696,
       "source": "app/icons/funda-logo.svg"
@@ -40,7 +48,7 @@
     },
     "no_hash": false,
     "output": {
-      "css": "app/css/base",
+      "css": "app/css/base/",
       "fonts": "app/fonts",
       "preview": "app/fonts"
     },

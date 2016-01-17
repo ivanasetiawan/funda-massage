@@ -1,0 +1,37 @@
+table {
+  border: solid 1px $color-blue-dark;
+}
+
+td, th {
+  text-align: left;
+  padding: rem(5px) rem(10px);
+  ~ td,
+  ~ th {
+    border-left: solid 1px $color-blue-dark;
+  }
+}
+
+td {
+  border-bottom: solid 1px $color-blue-dark;
+  &:not(:first-child) { padding: 0; }
+  > input {
+    padding: rem(5px) rem(10px);
+    outline: none;
+  }
+  ~ td {
+    min-width: rem(100px);
+    @media screen and (min-width: $bp-md) {
+      min-width: rem(150px);
+    }
+  }
+}
+
+thead {
+  background: $color-blue;
+}
+
+.break td {
+  text-align: center;
+  background: #ccc;
+  color: rgba(0, 0, 0, 0.5);
+}
