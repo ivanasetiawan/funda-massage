@@ -1,4 +1,11 @@
-.fx { opacity: 1; animation: animInitialHeader 1.2s cubic-bezier(0.7,0,0.3,1) both; }
+.fx--animInitialHeader {
+  opacity: 1;
+  animation: animInitialHeader 1.2s cubic-bezier(0.7,0,0.3,1) both;
+}
+.fx--fadeIn {
+  opacity: 0;
+  animation: animFadeIn 8s ease-in-out;
+}
 .fx-1 { animation-delay: 1s; }
 .fx-2 { animation-delay: 2.5s; }
 
@@ -6,7 +13,7 @@
   background: $color-green;
   color: $color-white;
   text-align: center;
-  animation: animSwitchLayoutOut 6s cubic-bezier(0.7,0,0.3,1);
+  animation: animSwitchLayoutOut 5s cubic-bezier(0.7,0,0.3,1);
   opacity: 0;
   height: 0;
 
@@ -29,7 +36,7 @@
 }
 
 main {
-  animation-delay: 6s;
+  animation-delay: 5s;
   animation: animSwitchLayoutIn 1.5s cubic-bezier(0.7,0,0.3,1);
   opacity: 1;
   height: 100%;

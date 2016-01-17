@@ -1,0 +1,56 @@
+{
+  "checksum": {
+    "previous": "aa5a642f41af5276cfcea4729662ceeb0afe969d12e6f668bdf76b18b2b06986",
+    "current": "aa5a642f41af5276cfcea4729662ceeb0afe969d12e6f668bdf76b18b2b06986"
+  },
+  "fonts": [
+    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.ttf",
+    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.svg",
+    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.woff",
+    "app/fonts/louraine_aa5a642f41af5276cfcea4729662ceeb.eot"
+  ],
+  "glyphs": {
+    "funda-logo": {
+      "codepoint": 61696,
+      "source": "app/icons/funda-logo.svg"
+    },
+    "thumbs_down": {
+      "codepoint": 61697,
+      "source": "app/icons/thumbs_down.svg"
+    },
+    "thumbs_up": {
+      "codepoint": 61698,
+      "source": "app/icons/thumbs_up.svg"
+    }
+  },
+  "options": {
+    "autowidth": false,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_ascent": 448,
+    "font_descent": 64,
+    "font_design_size": 16,
+    "font_em": 512,
+    "font_name": "louraine",
+    "force": false,
+    "input": {
+      "templates": "app/icons",
+      "vectors": "app/icons"
+    },
+    "no_hash": false,
+    "output": {
+      "css": "app/css/base",
+      "fonts": "app/fonts",
+      "preview": "app/fonts"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "scss"
+    ]
+  },
+  "templates": [
+    "app/css/base/_louraine.scss"
+  ]
+}

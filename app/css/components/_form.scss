@@ -118,13 +118,7 @@
 .massage-dd ul li.massage-dd-checked:before,
 .massage-submit:before,
 .massage-field-go:before {
-  font-family: 'nlicons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
+  @extend %icon-thumbs_up;
 }
 
 .massage-dd ul li.massage-dd-checked:before {
