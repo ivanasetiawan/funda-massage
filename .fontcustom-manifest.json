@@ -1,18 +1,22 @@
 {
   "checksum": {
-    "previous": "36f0743405a378ef2de88825490ebb3bc1935f3313007f5016128b61b680c024",
-    "current": "36f0743405a378ef2de88825490ebb3bc1935f3313007f5016128b61b680c024"
+    "previous": "cded6f700ead1386000a7ca2abfb5c641a3de4f318475ada3db1bf78338e01bc",
+    "current": "cded6f700ead1386000a7ca2abfb5c641a3de4f318475ada3db1bf78338e01bc"
   },
   "fonts": [
-    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.ttf",
-    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.svg",
-    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.woff",
-    "app/fonts/louraine_36f0743405a378ef2de88825490ebb3b.eot"
+    "app/fonts/louraine_cded6f700ead1386000a7ca2abfb5c64.ttf",
+    "app/fonts/louraine_cded6f700ead1386000a7ca2abfb5c64.svg",
+    "app/fonts/louraine_cded6f700ead1386000a7ca2abfb5c64.woff",
+    "app/fonts/louraine_cded6f700ead1386000a7ca2abfb5c64.eot"
   ],
   "glyphs": {
     "check": {
       "codepoint": 61699,
       "source": "app/icons/check.svg"
+    },
+    "create": {
+      "codepoint": 61701,
+      "source": "app/icons/create.svg"
     },
     "cross": {
       "codepoint": 61700,
